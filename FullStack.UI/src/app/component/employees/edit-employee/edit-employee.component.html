@@ -1,0 +1,38 @@
+<div class="container my-3">
+    <h1 class="mb-3">Edit Employees</h1>
+
+    <div class="row">
+        <div class="col-md-6">
+            <form #form="ngForm" (ngSubmit)="updateEmployee()">
+                <div class="mb-3">
+                  <label for="id" class="form-label">Id</label>
+                  <input type="text" name="id" id="id" class="form-control" [(ngModel)]="editEmployeeRequest.id" readonly>
+                </div>
+                <div class="mb-3">
+                  <label for="name" class="form-label">Name</label>
+                  <input type="text" name="name" id="name" class="form-control" placeholder="Enter name" [(ngModel)]="editEmployeeRequest.name">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="text" name="email" id="email" class="form-control" placeholder="Enter email" [(ngModel)]="editEmployeeRequest.email">
+                  </div>
+                  <div class="mb-3">
+                    <label for="phone" class="form-label">Phone</label>
+                    <input type="number" name="phone" id="phone" class="form-control" placeholder="Enter phone" [(ngModel)]="editEmployeeRequest.phone">
+                  </div>
+                  <div class="mb-3">
+                    <label for="salary" class="form-label">Salary</label>
+                    <input type="number" name="salary" id="salary" class="form-control" placeholder="Enter salary" [(ngModel)]="editEmployeeRequest.salary">
+                  </div>
+                  <div class="mb-3">
+                    <label for="department" class="form-label">Department</label>
+                    <input type="text" name="department" id="department" class="form-control" placeholder="Enter department" [(ngModel)]="editEmployeeRequest.department">
+                  </div>
+                <button type="submit" class="btn btn-primary">Update</button>
+                <button type="button" class="btn btn-danger" (click)="deleteEmployee()">Delete</button>
+              </form>
+        </div>
+    </div>
+    
+  </div>
+  
